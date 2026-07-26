@@ -95,9 +95,20 @@ img {
   flex-shrink: 0;
 }
 
-.brand svg {
-  width: 42px;
-  height: 42px;
+.logo-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+}
+
+.logo-badge img {
+  width: 60%;
+  height: auto;
 }
 
 .nav-links {
@@ -114,7 +125,7 @@ img {
   gap: 8px;
   color: #ffffff;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   letter-spacing: 0.01em;
   white-space: nowrap;
   transition: color 0.15s ease;
@@ -126,8 +137,8 @@ img {
 }
 
 .nav-links svg {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
 }
 
@@ -222,66 +233,15 @@ img {
 .footer-contact {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 56px 32px;
+  padding: 40px 32px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 48px;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.footer-brand svg {
+.footer-brand .logo-badge {
   width: 84px;
   height: 84px;
-}
-
-.contact-form {
-  flex: 1 1 380px;
-  max-width: 480px;
-}
-
-.contact-form-label {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #b8b8b8;
-  margin-bottom: 12px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  background: #1f1f1f;
-  border: 1px solid #333;
-  border-radius: var(--radius);
-  color: #ffffff;
-  padding: 12px 14px;
-  font-family: inherit;
-  font-size: 0.95rem;
-  margin-bottom: 12px;
-  resize: vertical;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: #777;
-}
-
-.contact-form button {
-  background: var(--color-accent);
-  color: #111;
-  border: none;
-  border-radius: var(--radius);
-  padding: 12px 24px;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: opacity 0.15s ease;
-}
-
-.contact-form button:hover,
-.contact-form button:focus-visible {
-  opacity: 0.85;
 }
 
 .footer-links {
@@ -357,6 +317,32 @@ img {
   font-size: 1.1rem;
   max-width: 720px;
   color: var(--color-text-soft);
+}
+
+.page-content p + p {
+  margin-top: 14px;
+}
+
+.page-content h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-text);
+  max-width: 780px;
+  margin-top: 40px;
+  margin-bottom: 12px;
+}
+
+.page-content h2:first-child {
+  margin-top: 0;
+}
+
+.page-content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  max-width: 780px;
+  margin-top: 28px;
+  margin-bottom: 8px;
 }
 
 /* ==========================================================================
