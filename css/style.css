@@ -162,7 +162,7 @@ img {
   gap: 8px;
   color: #ffffff;
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   letter-spacing: 0.01em;
   white-space: nowrap;
   transition: color 0.15s ease;
@@ -349,7 +349,7 @@ img {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 40px 32px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
 }
@@ -360,14 +360,14 @@ img {
 }
 
 .footer-links {
-  background: #f4f4f4;
+  background: #111111;
   border-top: 1px solid var(--color-border);
 }
 
 .footer-links-inner {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 32px;
+  padding: 40px 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -388,17 +388,18 @@ img {
   gap: 6px;
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--color-text-soft);
+  color: #ffffff;
 }
 
 .footer-nav a:hover,
 .footer-nav a:focus-visible {
-  color: var(--color-text);
+  color: var(--color-accent);
 }
 
 .footer-nav svg {
   width: 14px;
   height: 14px;
+  stroke: #ffffff;
 }
 
 .footer-copyright {
@@ -431,7 +432,7 @@ img {
 .page-content p {
   font-size: 1.1rem;
   max-width: 720px;
-  color: #000000;
+  color: #000000 !important;
 }
 
 .page-content p + p {
@@ -441,7 +442,7 @@ img {
 .page-content h2 {
   font-size: 40px;
   font-weight: 600;
-  color: #000000;
+  color: #000000 !important;
   max-width: 780px;
   margin-top: 40px;
   margin-bottom: 12px;
@@ -454,7 +455,7 @@ img {
 .page-content h3 {
   font-size: 33px;
   font-weight: 600;
-  color: #000000;
+  color: #000000 !important;
   max-width: 780px;
   margin-top: 28px;
   margin-bottom: 8px;
@@ -464,22 +465,17 @@ img {
    Recipes Page
    ========================================================================== */
 
-.page-recipes {
-  background: url("../images/recipes-bg.jpg") center center / cover no-repeat;
+.page-recipes .page-header {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url("../images/recipes-bg.jpg") center center / cover no-repeat !important;
   position: relative;
 }
 
-.page-recipes::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.92);
-  z-index: 0;
+.page-recipes .page-header h1 {
+  color: #ffffff !important;
 }
 
 .page-recipes .page-content {
-  position: relative;
-  z-index: 1;
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .recipes-grid {
