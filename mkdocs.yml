@@ -1,9 +1,2 @@
-site_name: Awilmer Web
-theme:
-  name: material
-  features:
-    - navigation.tabs
-    - search.suggest
-nav:
-  - Home: index.md
-  - Automation: automation.md
+site_name: Awilmer Web Tutorials
+use_directory_urls: true

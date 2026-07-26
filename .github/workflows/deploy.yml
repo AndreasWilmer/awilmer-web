@@ -1,4 +1,4 @@
-name: Deploy Docs
+name: Deploy Site
 on:
   push:
     branches: [main]
@@ -13,4 +13,12 @@ jobs:
         with:
           python-version: "3.x"
       - run: pip install mkdocs-material
-      - run: mkdocs gh-deploy --force
+      - name: Build Tutorials (MkDocs)
+        run: mkdocs build --site-dir _deploy/tutorials
+      - name: Copy Landingpage
+        run: cp -r landing/* _deploy/
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_deploy
