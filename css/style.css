@@ -466,7 +466,7 @@ img {
    ========================================================================== */
 
 .page-recipes .page-header {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url("../images/recipes-bg.jpg") center center / cover no-repeat !important;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url("../images/recipes/recipes-bg.jpg") center center / cover no-repeat !important;
   position: relative;
 }
 
