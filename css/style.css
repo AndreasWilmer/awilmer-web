@@ -27,14 +27,51 @@ html {
 }
 
 body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Rubik", -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--color-text);
   background: var(--color-bg);
   line-height: 1.6;
+  font-weight: 400;
 }
 
-h1, h2, h3, .brand {
-  font-family: "Rubik", "Inter", sans-serif;
+h1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+}
+
+h2 {
+  font-family: "Rubik", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: "Rubik", sans-serif;
+  font-size: 33px;
+  font-weight: 600;
+}
+
+h4 {
+  font-family: "Rubik", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+h5 {
+  font-family: "Rubik", sans-serif;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+h6 {
+  font-family: "Rubik", sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.brand {
+  font-family: "Rubik", sans-serif;
 }
 
 a {
@@ -114,7 +151,7 @@ img {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 36px;
   list-style: none;
   flex-wrap: wrap;
 }
@@ -124,8 +161,8 @@ img {
   align-items: center;
   gap: 8px;
   color: #ffffff;
-  font-weight: 600;
-  font-size: 1.2rem;
+  font-weight: 400;
+  font-size: 1.3rem;
   letter-spacing: 0.01em;
   white-space: nowrap;
   transition: color 0.15s ease;
@@ -233,11 +270,26 @@ img {
 }
 
 .recipe-card {
-  background: #2a2a2a;
-  border: 1px solid #444;
+  background: #ffffff;
+  border: 1px solid #e4e4e4;
   border-radius: var(--radius);
-  padding: 28px;
+  overflow: hidden;
   transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.recipe-card-content {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .recipe-card:hover {
@@ -249,11 +301,11 @@ img {
 .recipe-card h2 {
   font-size: 1.4rem;
   margin: 0 0 12px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .recipe-card h2 a {
-  color: #ffffff;
+  color: var(--color-text);
   text-decoration: none;
   transition: color 0.15s ease;
 }
@@ -265,7 +317,7 @@ img {
 .recipe-card p {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #bbb;
+  color: var(--color-text-soft);
   margin: 0;
 }
 
@@ -365,21 +417,21 @@ img {
 
 .page-header h1 {
   color: #ffffff;
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 800;
-  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 600;
 }
 
 .page-content {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 56px 32px;
+  color: #000000;
 }
 
 .page-content p {
   font-size: 1.1rem;
   max-width: 720px;
-  color: var(--color-text-soft);
+  color: #000000;
 }
 
 .page-content p + p {
@@ -387,9 +439,9 @@ img {
 }
 
 .page-content h2 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--color-text);
+  font-size: 40px;
+  font-weight: 600;
+  color: #000000;
   max-width: 780px;
   margin-top: 40px;
   margin-bottom: 12px;
@@ -400,12 +452,55 @@ img {
 }
 
 .page-content h3 {
-  font-size: 1.1rem;
+  font-size: 33px;
   font-weight: 600;
-  color: var(--color-text);
+  color: #000000;
   max-width: 780px;
   margin-top: 28px;
   margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   Recipes Page
+   ========================================================================== */
+
+.page-recipes {
+  background: url("../images/recipes-bg.jpg") center center / cover no-repeat;
+  position: relative;
+}
+
+.page-recipes::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.92);
+  z-index: 0;
+}
+
+.page-recipes .page-content {
+  position: relative;
+  z-index: 1;
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+}
+
+/* ==========================================================================
+   Recipe Detail Pages
+   ========================================================================== */
+
+.page-recipe-detail {
+  background: var(--color-bg);
+}
+
+.recipe-header-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
 }
 
 /* ==========================================================================
