@@ -1,1 +1,9 @@
-site_name: My Docs
+site_name: Awilmer Web
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - search.suggest
+nav:
+  - Home: index.md
+  - Automation: automation.md
